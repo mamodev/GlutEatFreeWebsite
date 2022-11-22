@@ -1,0 +1,14 @@
+{
+  "import SCSS module": {
+    "scope": "typescriptreact",
+    "prefix": "ims",
+    "body": ["import styles from './$TM_FILENAME_BASE.module.scss'"],
+    "description": "Common white"
+  },
+  "Styles var": {
+    "scope": "typescriptreact",
+    "prefix": "st",
+    "body": ["className={styles.$1}"],
+    "description": "Common white"
+  }
+}

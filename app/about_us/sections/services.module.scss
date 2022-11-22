@@ -1,0 +1,10 @@
+@import "../../../styles/theme";
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-inline: 15%;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}

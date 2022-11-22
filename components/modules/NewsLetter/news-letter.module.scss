@@ -1,0 +1,30 @@
+@import "../../../styles/theme";
+.text_container {
+  max-width: 500px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  padding-inline: 20%;
+}
+
+.form {
+  position: relative;
+  padding: 20px 40px;
+  padding-top: 40px;
+
+  background-color: $grey-50;
+
+  & .title {
+    position: absolute;
+    top: 0;
+    line-height: 1;
+    transform: translateY(-50%);
+  }
+
+  & > button {
+    width: 100%;
+  }
+}

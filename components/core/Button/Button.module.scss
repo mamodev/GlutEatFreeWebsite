@@ -1,0 +1,66 @@
+@import "../../../styles/theme";
+
+.button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  transition: 0.2s ease-in-out;
+
+  width: fit-content;
+  padding-inline: 20px;
+  padding-block: 10px;
+  border-radius: 15px;
+
+  &.contained {
+    &.primary {
+      color: $primary-contrast;
+      background-color: $primary;
+
+      &:hover {
+        background-color: $secondary;
+        color: $secondary-contrast;
+      }
+    }
+
+    &.secondary {
+      color: $secondary-contrast;
+      background-color: $secondary;
+
+      &:hover {
+        background-color: $primary;
+        color: $primary-contrast;
+      }
+    }
+  }
+
+  &.outlined {
+    color: $primary;
+    &.primary {
+      box-shadow: inset 0px 0px 0px 1px $primary, 0px 0px 0px 1px $primary;
+
+      &:hover {
+        box-shadow: inset 0px 0px 0px 1px $secondary, 0px 0px 0px 1px $secondary;
+      }
+    }
+
+    &.secondary {
+      box-shadow: inset 0px 0px 0px 1px $secondary, 0px 0px 0px 1px $secondary;
+      &:hover {
+        box-shadow: inset 0px 0px 0px 1px $primary, 0px 0px 0px 1px $primary;
+      }
+    }
+  }
+
+  // Font sizes (Button Size)
+  &.normal {
+    font-size: $font-button;
+  }
+
+  &.large {
+    font-size: $font-button--large;
+  }
+
+  &.small {
+    font-size: $font-button--small;
+  }
+}

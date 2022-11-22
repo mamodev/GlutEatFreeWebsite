@@ -1,0 +1,35 @@
+@import "../../../styles/theme";
+
+.link {
+  position: relative;
+  text-decoration: none;
+  color: $primary;
+
+  transition: 0.2s ease-in-out;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: $primary;
+    transition: 0.2s ease-in-out;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.125);
+  }
+
+  &:visited {
+    color: $primary;
+  }
+
+  &.active::before {
+    width: 100%;
+    background-color: $secondary;
+  }
+}

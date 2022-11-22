@@ -1,0 +1,18 @@
+@import "../../styles/theme";
+.container {
+  position: "relative";
+  height: calc(100vh - $appbar-height);
+  padding-left: 150px;
+  padding-bottom: 100px;
+}
+
+.svg {
+  z-index: -10;
+  position: absolute;
+  top: -$appbar-height;
+  right: 0;
+
+  &__path {
+    fill: rgba($primary, 0.1);
+  }
+}

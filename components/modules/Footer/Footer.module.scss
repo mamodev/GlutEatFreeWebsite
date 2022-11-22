@@ -1,0 +1,24 @@
+@import "../../../styles/theme";
+
+.container {
+  display: grid;
+  background-color: $primary;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  padding-inline: 100px;
+  padding-block: 20px;
+  a,
+  a:visited {
+    color: white;
+  }
+
+  a::before {
+    background-color: white;
+  }
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}

@@ -1,0 +1,9 @@
+@import "../../../styles/theme";
+.text {
+  color: $primary;
+  white-space: pre-wrap;
+  text-transform: uppercase;
+  font-size: 68px;
+  line-height: 1.1;
+  font-weight: 500;
+}

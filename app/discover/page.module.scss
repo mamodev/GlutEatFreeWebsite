@@ -1,0 +1,59 @@
+@import "../../styles/theme";
+
+.page_container {
+  padding-bottom: 150px;
+}
+.info_container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-inline: 200px;
+  gap: 150px;
+}
+.container {
+  display: flex;
+  gap: 100px;
+}
+.image {
+  width: 500px;
+  height: auto;
+}
+
+.discover_container {
+  padding-block: 50px;
+  text-align: center;
+  background-color: $grey-50;
+  margin-bottom: 120px;
+}
+
+.discover_grid {
+  margin-top: 30px;
+  display: grid;
+  text-align: left;
+  grid-template-columns: 1fr 1fr;
+  padding-inline: 25%;
+  justify-items: center;
+
+  & ul {
+    list-style: outside;
+    color: $primary;
+  }
+
+  & li {
+    margin-block: 10px;
+  }
+
+  & ul ul {
+    padding-left: 25px;
+  }
+
+  & a {
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

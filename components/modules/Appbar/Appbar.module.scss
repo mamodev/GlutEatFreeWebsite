@@ -1,0 +1,47 @@
+@import "../../../styles/theme";
+
+.spacer {
+  height: $appbar-height;
+}
+.appbar-container {
+  // background-color: white;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: $appbar-height;
+  padding-block: 10px;
+  padding-left: 20px;
+  padding-right: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: 0.2s ease-in-out;
+
+  // & .scrolled {
+  //   height: 60px;
+  //   //TODO add theme colors
+  //   background-color: white;
+  //   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  // }
+}
+
+.logo {
+  position: "relative";
+  width: 300px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  & > *:not(:first-of-type) {
+    padding-left: 40px;
+  }
+}

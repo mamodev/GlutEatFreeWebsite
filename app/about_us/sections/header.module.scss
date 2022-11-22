@@ -1,0 +1,43 @@
+@import "../../../styles/theme";
+.container {
+  padding-inline: 100px;
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  padding-right: 200px;
+  gap: 50px;
+  margin-block: 60px;
+}
+
+.title_container {
+  & :not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  margin-bottom: 40px;
+}
+
+.text_container {
+  max-width: 1000px;
+}
+
+.image_container {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    right: -50%;
+    border-radius: 50%;
+    background-color: $grey-50;
+  }
+}
+
+.image {
+  position: relative;
+  width: 350px;
+  height: auto;
+  border-radius: 50%;
+}

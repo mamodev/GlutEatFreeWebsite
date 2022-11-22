@@ -1,0 +1,20 @@
+{
+  "Flex column": {
+    "scope": "css, scss",
+    "prefix": "stack",
+    "body": ["display: flex;", "flex-direction: column;"],
+    "description": "Common white"
+  },
+  "Inline margin": {
+    "scope": "css, scss",
+    "prefix": "mx",
+    "body": ["margin-inline: $1;"],
+    "description": "Common white"
+  },
+  "Block margin": {
+    "scope": "css, scss",
+    "prefix": "my",
+    "body": ["margin-block: $1;"],
+    "description": "Common white"
+  }
+}

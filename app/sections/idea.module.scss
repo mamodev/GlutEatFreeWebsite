@@ -1,0 +1,29 @@
+@import "../../styles/theme";
+
+.container {
+  position: relative;
+  padding-left: 100px;
+  background-color: $grey-50;
+
+  padding-block: 50px;
+}
+
+.title {
+  padding-left: 50px;
+  transform: translateY(50%);
+  line-height: 1;
+  z-index: 10;
+}
+.content {
+  max-width: 60%;
+}
+
+.image {
+  background-color: white;
+  position: absolute;
+  right: 50px;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+}

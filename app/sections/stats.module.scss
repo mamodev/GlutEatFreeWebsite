@@ -1,0 +1,27 @@
+@import "../../styles/theme";
+
+$chart-size: 250px;
+.pie_one {
+  background: conic-gradient($grey-50 0% 23%, $primary 23% 100%);
+  border-radius: 50%;
+  min-width: $chart-size;
+  min-height: $chart-size;
+  transform: rotate(-70.5deg);
+}
+.pie_two {
+  background: conic-gradient($grey-50 0% 10%, $secondary 10% 100%);
+  border-radius: 50%;
+  min-width: $chart-size;
+  min-height: $chart-size;
+  transform: rotate(-30deg);
+}
+
+.section_container {
+  max-width: 60%;
+}
+
+.list {
+  padding-left: 25px;
+  list-style: outside;
+  color: $primary;
+}
