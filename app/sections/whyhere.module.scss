@@ -1,27 +1,51 @@
 @import "../../styles/theme";
 
-.container {
-  position: relative;
-  padding-left: 650px;
-  background-color: $grey-50;
-
-  padding-block: 50px;
-}
-
 .title {
-  padding-left: 600px;
+  text-align: center;
   transform: translateY(50%);
   line-height: 1;
   z-index: 10;
 }
-.content {
-  max-width: 80%;
+.image {
+  display: none;
 }
 
-.image {
-  position: absolute;
-  left: 50px;
-  height: auto;
-  min-width: 500px;
-  border-radius: 50%;
+.container {
+  background-color: $grey-50;
+  padding-block: 25px;
+  padding-inline: 20px;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+}
+
+// .container {
+//   position: relative;
+//   padding-left: 650px;
+//   background-color: $grey-50;
+
+//   padding-block: 50px;
+// }
+
+// .title {
+//   padding-left: 600px;
+//   transform: translateY(50%);
+//   line-height: 1;
+//   z-index: 10;
+// }
+// .content {
+//   max-width: 80%;
+// }
+
+// .image {
+//   position: absolute;
+//   left: 50px;
+//   height: auto;
+//   min-width: 500px;
+//   border-radius: 50%;
+// }

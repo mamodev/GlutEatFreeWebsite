@@ -1,29 +1,50 @@
 @import "../../styles/theme";
 
-.container {
-  position: relative;
-  padding-left: 100px;
-  background-color: $grey-50;
-
-  padding-block: 50px;
+.image {
+  display: none;
 }
 
 .title {
-  padding-left: 50px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
   transform: translateY(50%);
   line-height: 1;
-  z-index: 10;
-}
-.content {
-  max-width: 60%;
 }
 
-.image {
-  background-color: white;
-  position: absolute;
-  right: 50px;
-  height: 500px;
-  width: 500px;
-  border-radius: 50%;
-  object-fit: cover;
+.container {
+  z-index: -1;
+  position: relative;
+  padding-inline: 15px;
+  padding-block: 30px;
+  background-color: $grey-50;
 }
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+// .container {
+//   position: relative;
+//   padding-left: 100px;
+//   background-color: $grey-50;
+
+//   padding-block: 50px;
+// }
+
+// .content {
+//   max-width: 60%;
+// }
+
+// .image {
+//   background-color: white;
+//   position: absolute;
+//   right: 50px;
+//   height: 500px;
+//   width: 500px;
+//   border-radius: 50%;
+//   object-fit: cover;
+// }

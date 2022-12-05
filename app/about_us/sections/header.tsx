@@ -3,14 +3,14 @@ import Subtitle from "../../../components/core/Tipograpy/Subtitle";
 import img from "../../../public/assets/images/about-us/header.png";
 import styles from "./header.module.scss";
 import Image from "next/image";
-import BigTitle from "../../../components/core/Tipograpy/BigTitle";
+import LargeTitle from "../../../components/core/Tipograpy/LargeTitle";
 
 export default function AboutUsHeader() {
   return (
     <div className={styles.container}>
       <div className={styles.left_container}>
         <div className={styles.title_container}>
-          <BigTitle>UNA VISIONE DI INCLUSIONE ALIMENTARE</BigTitle>
+          <LargeTitle>UNA VISIONE DI INCLUSIONE ALIMENTARE</LargeTitle>
           <Subtitle>Così che tutti possano mangiare liberamente</Subtitle>
         </div>
         <div className={styles.text_container}>

@@ -1,35 +1,63 @@
+"use client";
 import Image from "next/image";
-import Flex from "../../layout/Flex/Flex";
+import React from "react";
 import longLogo from "../../../public/assets/images/long-logo.png";
-
-import styles from "./Appbar.module.scss";
-import NavLink from "../../core/NavLink/NavLink";
+import { composeClasses } from "../../../utils";
 import Button from "../../core/Button/Button";
+import NavLink from "../../core/NavLink/NavLink";
+import styles from "./Appbar.module.scss";
 
 export default function Appbar() {
+  const [menuOpen, setMenuOpen] = React.useState(false);
+
+  const menuButtonClickHandler = () => {
+    setMenuOpen((open) => (open ? false : open));
+  };
   return (
-    <div id="appbar">
-      <div className={styles.spacer}></div>
-      <div className={styles["appbar-container"]}>
+    <nav className={styles.nav}>
+      <div className={styles.container}>
         <Image src={longLogo} alt="Appbar logo" className={styles.logo} />
 
-        <div className={styles.navigation}>
-          <Flex spacing={40}>
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="/about_us">Chi siamo</NavLink>
-            <NavLink href="/discover">Scopri di più</NavLink>
-          </Flex>
-          <Flex spacing={8}>
-            <Flex spacing={10}>
-              <Button color="secondary">Iscriviti alla Newsletter</Button>
-              {/* <Button color="secondary">Registrati</Button>
-              <Button color="secondary" variant="outlined">
-                Accedi
-              </Button> */}
-            </Flex>
-          </Flex>
+        <div
+          className={composeClasses([
+            styles.menu,
+            menuOpen ? styles.open : undefined,
+          ])}
+        >
+          <span>
+            <NavLink href="/" onClick={menuButtonClickHandler}>
+              Home
+            </NavLink>
+          </span>
+          <span>
+            <NavLink href="/about_us" onClick={menuButtonClickHandler}>
+              Chi siamo
+            </NavLink>
+          </span>
+          <span>
+            <NavLink href="/discover" onClick={menuButtonClickHandler}>
+              Scopri di più
+            </NavLink>
+          </span>
+          <span>
+            <Button color="secondary" onClick={menuButtonClickHandler}>
+              Iscriviti alla Newsletter
+            </Button>
+          </span>
         </div>
+
+        <button
+          className={composeClasses([
+            styles.burger,
+            menuOpen ? styles.open : undefined,
+          ])}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-    </div>
+    </nav>
   );
 }

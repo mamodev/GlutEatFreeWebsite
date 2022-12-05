@@ -1,30 +1,65 @@
 @import "../../../styles/theme";
-.text_container {
-  max-width: 500px;
-}
+
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-items: center;
-  padding-inline: 20%;
+  margin-inline: 20px;
+  gap: 40px;
 }
 
 .form {
-  position: relative;
-  padding: 20px 40px;
-  padding-top: 40px;
-
+  width: 100%;
   background-color: $grey-50;
+  position: relative;
+  padding: 20px 20px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
-  & .title {
+  &__title {
+    z-index: 10;
     position: absolute;
     top: 0;
     line-height: 1;
+    width: 100%;
     transform: translateY(-50%);
   }
-
-  & > button {
-    width: 100%;
-  }
 }
+
+.text_container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+// .container {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   align-items: center;
+//   justify-items: center;
+//   padding-inline: 20%;
+// }
+
+// .form {
+//   position: relative;
+//   padding: 20px 40px;
+//   padding-top: 40px;
+
+//   background-color: $grey-50;
+
+//   & .title {
+//     position: absolute;
+//     top: 0;
+//     line-height: 1;
+//     transform: translateY(-50%);
+//   }
+
+//   & > button {
+//     width: 100%;
+//   }
+// }

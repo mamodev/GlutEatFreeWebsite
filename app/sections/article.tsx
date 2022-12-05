@@ -1,57 +1,58 @@
-import Image from "next/image";
 import SmallContent from "../../components/core/Tipograpy/SmallContent";
 import Button from "../../components/core/Button/Button";
 import SmallTitle from "../../components/core/Tipograpy/SmallTitle";
 import Subtitle from "../../components/core/Tipograpy/Subtitle";
 import Title from "../../components/core/Tipograpy/Title";
-import Flex from "../../components/layout/Flex/Flex";
 import Stack from "../../components/layout/Stack/Stack";
 import styles from "./article.module.scss";
+import Image, { StaticImageData } from "next/image";
+import img from "../../public/assets/images/home/article.png";
+
 export default function HomeArticleSection() {
   return (
-    <Stack align="center" spacing={100} className={styles.container}>
-      <Stack spacing={20}>
-        <Title>{"UNA MAGGIORE CONSAPEVOLEZZA\nPER UNA MAGGIORE INCLUSIONE"}</Title>
+    <div className={styles.container}>
+      <div className={styles.text}>
+        <Title>{"MAGGIORE CONSAPEVOLEZZA\nPER MAGGIORE INCLUSIONE"}</Title>
         <Subtitle>Leggi gli ultimi articoli del nostro blog</Subtitle>
-      </Stack>
-      <Flex justify="space-between" style={{ paddingInline: 200, width: "100%" }}>
+      </div>
+      <div className={styles.card_container}>
         <Card
-          title="Titolo articolo"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
-          image="https://via.placeholder.com/200x200.png?text=Article-Image"
+          title="Benvenuti in GlutEatFree"
+          description="Iniziamo insieme un nuovo percorso per un futuro di inclusione alimentare"
+          image={img}
         />
         <Card
-          title="Titolo articolo"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
-          image="https://via.placeholder.com/200x200.png?text=Article-Image"
+          title="La celiachia"
+          description="Cos’è la celiachia?"
+          image={img}
         />
         <Card
-          title="Titolo articolo"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
-          image="https://via.placeholder.com/200x200.png?text=Article-Image"
+          title="Non solo celiachia "
+          description="La celiachia non è l’unico disturbo legato all’ingestione di glutine: facciamo chiarezza"
+          image={img}
         />
         <Card
-          title="Titolo articolo"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
-          image="https://via.placeholder.com/200x200.png?text=Article-Image"
+          title="I sintomi"
+          description="Come si manifesta la celiachia?"
+          image={img}
         />
-      </Flex>
+      </div>
       <Button size="large" color="secondary">
         Vedi più articoli
       </Button>
-    </Stack>
+    </div>
   );
 }
 
-type CardProps = { title: string; description: string; image: string };
+type CardProps = { title: string; description: string; image: StaticImageData };
 function Card({ title, description, image }: CardProps) {
   return (
-    <Stack align="center" spacing={15} style={{ width: 300 }}>
-      <Image src={image} alt="title" width={300} height={300} style={{ objectFit: "contain" }} />
-      <Stack>
-        <SmallTitle style={{ fontSize: 28 }}>{title}</SmallTitle>
+    <Stack className={styles.card}>
+      <Image src={image} alt="title" className={styles.image} />
+      <div>
+        <SmallTitle>{title}</SmallTitle>
         <SmallContent>{description}</SmallContent>
-      </Stack>
+      </div>
     </Stack>
   );
 }

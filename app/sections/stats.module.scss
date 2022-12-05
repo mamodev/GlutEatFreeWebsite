@@ -1,27 +1,68 @@
 @import "../../styles/theme";
 
-$chart-size: 250px;
-.pie_one {
-  background: conic-gradient($grey-50 0% 23%, $primary 23% 100%);
-  border-radius: 50%;
-  min-width: $chart-size;
-  min-height: $chart-size;
-  transform: rotate(-70.5deg);
-}
-.pie_two {
-  background: conic-gradient($grey-50 0% 10%, $secondary 10% 100%);
-  border-radius: 50%;
-  min-width: $chart-size;
-  min-height: $chart-size;
-  transform: rotate(-30deg);
+$chart-size: 200px;
+
+.percentage {
+  font-size: $font-title;
+  font-weight: 600;
 }
 
-.section_container {
-  max-width: 60%;
+.section {
+  margin-block: 50px;
+  margin-inline: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:nth-child(2) {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.text {
+  &_title {
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
 }
 
 .list {
-  padding-left: 25px;
   list-style: outside;
   color: $primary;
+  & > :not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
+.pie_one {
+  background: conic-gradient($grey-50 0% 23%, $primary 23% 100%);
+  border-radius: 50%;
+  width: $chart-size;
+  min-height: $chart-size;
+  transform: rotate(-70.5deg);
+  margin-bottom: 25px;
+}
+
+.pie_two {
+  background: conic-gradient($grey-50 0% 10%, $secondary 10% 100%);
+  border-radius: 50%;
+  width: $chart-size;
+  min-height: $chart-size;
+  transform: rotate(-30deg);
+  margin-bottom: 25px;
+}
+
+// .section_container {
+//   max-width: 60%;
+// }
+
+// .list {
+//   padding-left: 25px;
+//   list-style: outside;
+//   color: $primary;
+// }

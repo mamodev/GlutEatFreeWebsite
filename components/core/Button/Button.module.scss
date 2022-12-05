@@ -4,7 +4,9 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
-  transition: 0.2s ease-in-out;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-property: color, border, background-color;
 
   width: fit-content;
   padding-inline: 20px;
@@ -52,15 +54,15 @@
   }
 
   // Font sizes (Button Size)
+  &.small {
+    font-size: $font-button--small;
+  }
+
   &.normal {
     font-size: $font-button;
   }
 
   &.large {
     font-size: $font-button--large;
-  }
-
-  &.small {
-    font-size: $font-button--small;
   }
 }

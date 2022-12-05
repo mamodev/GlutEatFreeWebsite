@@ -1,6 +1,7 @@
 @import "../../../styles/theme";
 
 .container {
+  display: flex;
   border: 2px solid transparent;
   border-radius: 10px;
   transition: 0.2s ease-in-out;
@@ -14,8 +15,8 @@
   }
 
   & input {
+    flex: 1;
     position: relative;
-    width: 300px;
     font-family: "Poppins", sans-serif;
     font-size: $font-text-field;
     color: $primary;

@@ -1,18 +1,43 @@
 @import "../../styles/theme";
-.container {
-  position: "relative";
-  height: calc(100vh - $appbar-height);
-  padding-left: 150px;
-  padding-bottom: 100px;
+
+.logo {
+  width: 120px;
+  height: auto;
 }
 
-.svg {
-  z-index: -10;
-  position: absolute;
-  top: -$appbar-height;
-  right: 0;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  text-align: center;
+  padding-inline: 10px;
+}
 
-  &__path {
-    fill: rgba($primary, 0.1);
+.text_container {
+  & > :not(:last-child) {
+    margin-bottom: 10px;
+  }
+  & > :last-child {
+    padding-inline: 30px;
   }
 }
+
+// .container {
+//   position: "relative";
+//   height: calc(100vh - $appbar-height);
+//   padding-left: 150px;
+//   padding-bottom: 100px;
+// }
+
+// .svg {
+//   z-index: -10;
+//   position: absolute;
+//   top: -$appbar-height;
+//   right: 0;
+
+//   &__path {
+//     fill: rgba($primary, 0.1);
+//   }
+// }

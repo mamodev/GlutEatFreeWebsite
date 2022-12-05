@@ -1,14 +1,9 @@
-"use client";
-import Content from "../../../components/core/Tipograpy/Content";
-import Subtitle from "../../../components/core/Tipograpy/Subtitle";
-import img from "../../../public/assets/images/about-us/header.png";
 import { composeClasses } from "../../../utils";
-import { motion } from "framer-motion";
 
-import Title from "../../../components/core/Tipograpy/Title";
 import Image from "next/image";
-import chiara from "../../../public/assets/images/avatar/chiara.png";
+import Title from "../../../components/core/Tipograpy/Title";
 import andrea from "../../../public/assets/images/avatar/andrea.png";
+import chiara from "../../../public/assets/images/avatar/chiara.png";
 import isabella from "../../../public/assets/images/avatar/isabella.png";
 import marco from "../../../public/assets/images/avatar/marco.png";
 import matteo from "../../../public/assets/images/avatar/matteo.png";
@@ -16,13 +11,8 @@ import styles from "./team.module.scss";
 
 export default function AboutUsTeam() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      className={styles.container}
-    >
+    <div className={styles.container}>
       <Title>Il team</Title>
-
       <div className={styles.avatar_container}>
         <div
           className={composeClasses([
@@ -108,6 +98,6 @@ export default function AboutUsTeam() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

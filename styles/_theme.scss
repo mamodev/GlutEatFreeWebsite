@@ -1,3 +1,9 @@
+//Break points
+$mobile: 415px;
+$tablet: 768px;
+$laptop: 1280px;
+$desktop: 1920px;
+
 // palette
 $primary: #213589;
 $primary-light: #40b0df;
@@ -10,10 +16,54 @@ $grey-50: #f1f2f6;
 $grey-100: #e6e6e8;
 
 //font
+#html {
+  --font-button: 16px;
+  --font-button--large: 18px;
+  --font-button--small: 16px;
 
-$font-button: 17px;
-$font-button--large: 24px;
-$font-button--small: 15px;
+  --font-title: 23px;
+  --font-title--large: 28px;
+  --font-title--small: 20px;
+
+  --font-subtitle: 16px;
+  --font-subtitle--large: 28px;
+  --font-subtitle--small: 16px;
+
+  --font-content: 16px;
+  --font-content--large: 20px;
+  --font-content--small: 14px;
+
+  @media (min-width: $tablet) {
+    --font-button: 17px;
+    --font-button--large: 24px;
+    --font-button--small: 15px;
+
+    --font-title: 48px;
+    --font-title--large: 68px;
+    --font-title--small: 36px;
+
+    --font-subtitle: 26px;
+    --font-subtitle--large: 68px;
+    --font-subtitle--small: 16px;
+  }
+}
+//Base typo
+$font-title: var(--font-title);
+$font-title--large: var(--font-title--large);
+$font-title--small: var(--font-title--small);
+
+$font-subtitle: var(--font-subtitle);
+$font-subtitle--large: var(--font-subtitle--large);
+$font-subtitle--small: var(--font-subtitle--small);
+
+$font-content: var(--font-content);
+$font-content--large: var(--font-content--large);
+$font-content--small: var(--font-content--small);
+
+//Components
+$font-button: var(--font-button);
+$font-button--large: var(--font-button--large);
+$font-button--small: var(--font-button--small);
 
 $font-text-field: 15px;
 $font-text-field--large: 24px;

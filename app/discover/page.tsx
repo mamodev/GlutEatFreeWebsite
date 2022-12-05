@@ -1,11 +1,11 @@
 import Image from "next/image";
-import BigTitle from "../../components/core/Tipograpy/BigTitle";
 import Content from "../../components/core/Tipograpy/Content";
+import LargeTitle from "../../components/core/Tipograpy/LargeTitle";
 import Subtitle from "../../components/core/Tipograpy/Subtitle";
 import Title from "../../components/core/Tipograpy/Title";
-import Flex from "../../components/layout/Flex/Flex";
+// import Flex from "../../components/layout/Flex/Flex";
 import Stack from "../../components/layout/Stack/Stack";
-import NewsLetter from "../../components/modules/NewsLetter/news-letter";
+// import NewsLetter from "../../components/modules/NewsLetter/news-letter";
 import descriptionImage from "../../public/assets/images/discover/description.png";
 import symptomsImage from "../../public/assets/images/discover/symptoms.png";
 import treatmentImage from "../../public/assets/images/discover/treatment.png";
@@ -14,14 +14,14 @@ import styles from "./page.module.scss";
 export default function DiscoverPage() {
   return (
     <div className={styles.page_container}>
-      <Header />
+      {/* <Header />
       <div className={styles.info_container}>
         <Description />
         <Symptoms />
         <Treatment />
       </div>
       <Discover />
-      <NewsLetter />
+      <NewsLetter /> */}
     </div>
   );
 }
@@ -84,7 +84,7 @@ function Header() {
       spacing={20}
       style={{ height: "200px" }}
     >
-      <BigTitle>La celiachia</BigTitle>
+      <LargeTitle>La celiachia</LargeTitle>
       <Subtitle>FACCIAMO CHIAREZZA</Subtitle>
     </Stack>
   );

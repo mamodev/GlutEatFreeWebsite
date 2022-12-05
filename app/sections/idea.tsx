@@ -1,17 +1,16 @@
 import Image from "next/image";
 import Button from "../../components/core/Button/Button";
 import Content from "../../components/core/Tipograpy/Content";
-import Title from "../../components/core/Tipograpy/Title";
+import LargeTitle from "../../components/core/Tipograpy/LargeTitle";
 import Flex from "../../components/layout/Flex/Flex";
-import Stack from "../../components/layout/Stack/Stack";
 import image from "../../public/assets/images/home/idea.png";
 import styles from "./idea.module.scss";
 export default function HomeIdeaSection() {
   return (
-    <Stack align="left">
-      <Title className={styles.title}>La nostra idea</Title>
+    <>
+      <LargeTitle className={styles.title}>La nostra idea</LargeTitle>
       <Flex className={styles.container} justify="space-between">
-        <Stack spacing={20} className={styles.content}>
+        <div className={styles.content}>
           <Content>
             Quando si hanno delle esigenze alimentari, anche uscire a mangiare
             può diventare un peso.
@@ -30,10 +29,10 @@ export default function HomeIdeaSection() {
             consapevolezza e conoscenza del problema.
           </Content>
           <Button color="secondary">Scopri di più su di noi</Button>
-        </Stack>
+        </div>
 
         <Image className={styles.image} src={image} alt="image"></Image>
       </Flex>
-    </Stack>
+    </>
   );
 }

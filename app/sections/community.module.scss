@@ -1,6 +1,37 @@
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  margin-inline: 100px;
+.container {
+  margin-block: 30px;
+  display: flex;
+  flex-direction: column;
 }
+
+.text {
+  text-align: center;
+  padding: 20px;
+
+  & > :last-child {
+    padding-inline: 10px;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.grid {
+  margin-inline: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  grid-gap: 20px;
+  &__item {
+    text-align: center;
+  }
+}
+
+// .grid {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   justify-items: center;
+//   margin-inline: 100px;
+// }

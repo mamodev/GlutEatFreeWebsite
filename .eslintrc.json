@@ -1,3 +1,31 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "plugins": ["unused-imports"],
+  "rules": {
+    //UNUSED VARS
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      //TODO make it strictier
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    //BEST PRACTISE
+    "array-callback-return": ["error"],
+    "eqeqeq": ["error"],
+    "max-classes-per-file": ["error", 1],
+    "no-alert": ["off"],
+    "no-else-return": [
+      "error",
+      {
+        "allowElseIf": true
+      }
+    ]
+  }
 }

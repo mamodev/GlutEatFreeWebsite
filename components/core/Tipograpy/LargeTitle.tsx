@@ -1,13 +1,13 @@
 import { composeClasses } from "../../../utils";
-import styles from "./Subtitle.module.scss";
+import styles from "./LargeTitle.module.scss";
 
-export type SubtitleProps = {
-  children: React.ReactNode;
+export type LargeTitleProps = {
+  children: string;
   style?: React.CSSProperties;
   className?: string;
 };
 
-export default function Subtitle(props: SubtitleProps) {
+export default function LargeTitle(props: LargeTitleProps) {
   return (
     <h1
       style={props.style}

@@ -1,13 +1,14 @@
+import Image from "next/image";
 import Button from "../../components/core/Button/Button";
-import BigTitle from "../../components/core/Tipograpy/BigTitle";
+import LargeTitle from "../../components/core/Tipograpy/LargeTitle";
 import Subtitle from "../../components/core/Tipograpy/Subtitle";
-import Stack from "../../components/layout/Stack/Stack";
+import logo from "../../public/assets/images/common/logo-primary.png";
 import styles from "./header.module.scss";
 
 export default function HomeHeader() {
   return (
-    <Stack className={styles.container} spacing={50} justify="center">
-      <svg
+    <div className={styles.container}>
+      {/* <svg
         className={styles.svg}
         width="597"
         height="576"
@@ -16,19 +17,16 @@ export default function HomeHeader() {
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle cx="500" cy="76" r="500" className={styles.svg__path} />
-      </svg>
+      </svg> */}
 
-      <Stack spacing={20}>
-        <BigTitle style={{ lineHeight: 1.4 }}>
-          {"LA CELIACHIA NELLA VITA \nDI TUTTI I GIORNI"}
-        </BigTitle>
-
-        <Subtitle>Un nuovo inizio per un futuro di inclusione alimentare</Subtitle>
-      </Stack>
-
+      <Image src={logo} alt="logo" className={styles.logo} />
+      <div className={styles.text_container}>
+        <LargeTitle>{"CELIACHIA E INCLUSIONE ALIMENTARE"}</LargeTitle>
+        <Subtitle>Tutto il mondo senza glutine ma non per moda</Subtitle>
+      </div>
       <Button size="large" variant="contained" color="secondary">
         Iscriviti alla Newsletter
       </Button>
-    </Stack>
+    </div>
   );
 }

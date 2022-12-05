@@ -1,12 +1,15 @@
 @import "../../../styles/theme";
 
 .container {
-  display: grid;
-  background-color: $primary;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-items: center;
-  padding-inline: 100px;
+  gap: 30px;
+
   padding-block: 20px;
+  background-color: $primary;
+
   a,
   a:visited {
     color: white;
@@ -17,8 +20,55 @@
   }
 }
 
+.link_container {
+  width: 100%;
+  padding-inline: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .logo {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: auto;
   object-fit: contain;
 }
+
+@media (min-width: $tablet) {
+  .container {
+    padding-inline: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .link_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (min-width: $laptop) {
+  .link_container {
+    flex-direction: row;
+  }
+}
+
+// .container {
+
+//   background-color: $primary;
+//   justify-items: center;
+//   a,
+//   a:visited {
+//     color: white;
+//   }
+
+//   a::before {
+//     background-color: white;
+//   }
+// }
+
+// .logo {
+//   width: 150px;
+//   height: 150px;
+//   object-fit: contain;
+// }

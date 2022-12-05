@@ -2,9 +2,13 @@ import Appbar from "../components/modules/Appbar/Appbar";
 import Footer from "../components/modules/Footer/Footer";
 import "../styles/globals.scss";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="it">
+    <html lang="it" id="html">
       <head>
         <title>GEF - Home</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />

@@ -4,7 +4,6 @@ import bookingImg from "../../../public/assets/images/about-us/booking-service.p
 import securityImg from "../../../public/assets/images/about-us/security.png";
 import infoImg from "../../../public/assets/images/about-us/info.png";
 import styles from "./services.module.scss";
-import { motion } from "framer-motion";
 
 export default function AboutUsServices() {
   return (
