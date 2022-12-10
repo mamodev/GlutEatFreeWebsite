@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import longLogo from "../../../public/assets/images/long-logo.png";
 import { composeClasses } from "../../../utils";
 import Button from "../../core/Button/Button";
 import NavLink from "../../core/NavLink/NavLink";
 import styles from "./Appbar.module.scss";
+import longLogo from "../../../public/assets/images/long-logo.png";
+import drawerLogo from "../../../public/assets/images/common/logo-white.png";
 
 export default function Appbar() {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -24,6 +25,11 @@ export default function Appbar() {
             menuOpen ? styles.open : undefined,
           ])}
         >
+          <Image
+            src={drawerLogo}
+            alt="Drawer logo"
+            className={styles.drawer_logo}
+          />
           <span>
             <NavLink href="/" onClick={menuButtonClickHandler}>
               Home

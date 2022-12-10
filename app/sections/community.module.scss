@@ -19,12 +19,13 @@
 }
 
 .grid {
-  margin-inline: 50px;
+  margin-inline: 10px;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   grid-gap: 20px;
   &__item {
+    max-width: 250px;
     text-align: center;
   }
 }

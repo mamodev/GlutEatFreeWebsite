@@ -3,7 +3,10 @@
 .logo {
   display: none;
 }
-
+.drawer_logo {
+  width: 100px;
+  height: auto;
+}
 .container {
   max-width: $laptop;
   margin: 0 auto;
@@ -23,46 +26,82 @@
 }
 
 .burger {
-  display: block;
-  position: relative;
+  cursor: pointer;
   z-index: 1;
-  user-select: none;
+  display: flex;
   appearance: none;
   border: none;
   outline: none;
-  background: none;
-  cursor: pointer;
+  user-select: none;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 20px;
+  right: 25px;
+
+  box-sizing: content-box;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: white 0px 0px 20px 20px;
+  // backdrop-filter: blur(1px);
+
+  width: 31px;
+  height: 31px;
+
+  transition-property: transform, background-color, box-shadow;
+  transition-duration: calc(2s / 3), 0.2s, 0.2s;
+  transition-delay: 0s, 0.5s, 0.5s;
+  transition-timing-function: ease-in;
+
+  &.open {
+    background-color: transparent;
+    box-shadow: none;
+
+    transition-timing-function: ease-out;
+    transition-delay: calc(0.5s / 3), 0.1s, 0.1s;
+    transition-duration: calc(2s / 3), 0.05s, 0.05s;
+    transform: rotate(225deg);
+  }
 
   & span {
     display: block;
     position: relative;
-    width: 33px;
+    width: 100%;
     height: 3px;
-    margin-bottom: 6px;
-    background-color: $primary;
-
-    transform-origin: 0 0;
-    transition: 0.4s;
+    margin-block: 3px;
+    transform-origin: center center;
 
     &:nth-child(2) {
-      transform: translateX(5px);
+      transition-property: transform, background-color;
+      transition-duration: calc(2s / 3), 0.2s;
+      transition-delay: 0s, 0.2s;
     }
+    background-color: $primary;
+    transition-property: transform, background-color;
+    transition-duration: calc(0.8s / 3), 0.2s;
+    transition-delay: calc(1.2s / 3), 0.2s;
+    transition-timing-function: ease-out;
   }
 
   &.open span {
+    background-color: white;
+    transition-timing-function: ease-in;
+    transition-duration: calc(1s / 3), 0.2s;
+    transition-delay: 0s, 0.2s;
+
     &:nth-child(2) {
-      opacity: 0;
-      transform: translateX(0px);
+      transition-delay: calc(1.5s / 3), 0.2s;
+      transition-duration: calc(1s / 3), 0.2s;
+      transform: translateX(0px) rotate(90deg);
     }
 
     &:nth-child(1) {
-      transform: translate(0px, -2px) rotate(45deg);
-      background-color: white;
+      transform: translate(0px, 9px);
     }
 
     &:nth-child(3) {
-      transform: translate(-3px, 3px) rotate(-45deg);
-      background-color: white;
+      transform: translate(0px, -9px);
     }
   }
 }
@@ -71,20 +110,37 @@
   display: none;
 
   @media (max-width: $tablet) {
-    &::before {
-      z-index: -1;
+    &::before,
+    &::after {
       position: absolute;
       content: "";
       height: 100%;
       width: 100%;
-      background-color: $primary;
       transform: translateY(-100vh);
-      transition: 0.4s ease-in-out;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.3s;
+    }
+
+    &::before {
+      z-index: -1;
+      background-color: $primary;
+      transition-delay: 0s;
+    }
+    &::after {
       opacity: 0;
+      z-index: -2;
+      background-color: $secondary;
+      transition-delay: 0.3s;
+    }
+
+    &.open::after {
+      opacity: 1;
+      transition-delay: 0s;
+      transform: translateY(0);
     }
 
     &.open::before {
-      opacity: 1;
+      transition-delay: 0.3s;
       transform: translateY(0);
     }
 
@@ -93,7 +149,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      opacity: 0;
+      opacity: 1;
       pointer-events: none;
       height: 100vh;
       width: 100vw;
@@ -123,18 +179,27 @@
 
     &.open {
       pointer-events: all;
+      transform: scale(1.1);
 
-      $n: 4;
-      @for $x from 1 through $n {
+      $n: 5;
+      // transition-delay: 300ms + $n * 100ms;
+      transition-duration: 1000ms;
+
+      & > :nth-child(1) {
+        opacity: 1;
+        transition-delay: 300ms;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-in;
+      }
+
+      @for $x from 2 through $n {
         & > :nth-child(#{$x}) {
           opacity: 1;
-          transition-delay: 100ms * $x + 150ms;
-          transition-duration: 0.3s;
+          transition-delay: 300ms + 100ms * $x;
+          transition-duration: 0.4s;
           transition-timing-function: ease-in;
         }
       }
-
-      opacity: 1;
     }
   }
 }
@@ -151,6 +216,10 @@
   }
 }
 @media (min-width: $tablet) {
+  .drawer_logo {
+    display: none;
+  }
+
   .burger {
     display: none;
   }
