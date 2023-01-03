@@ -1,30 +1,40 @@
 @import "../../../styles/theme";
+
 .container {
-  padding-inline: 100px;
+  // padding-inline: 100px;
+  padding-top: 30px;
   display: flex;
   align-items: center;
+
+  flex-direction: column-reverse;
+
   justify-content: center;
   gap: 20px;
 }
+
 .paragraph {
   max-width: 1000px;
+  text-align: center;
   & .title {
     margin-bottom: 25px;
   }
 
   & .content_container {
+    text-align: justify;
+    padding-inline: 25px;
     & :not(:last-child) {
       margin-bottom: 15px;
     }
   }
 }
+
 .image_container {
   position: relative;
   &::before {
     position: absolute;
     content: "";
-    width: 320px;
-    height: 320px;
+    width: 220px;
+    height: 220px;
 
     bottom: 10px;
     border-radius: 50%;
@@ -38,5 +48,5 @@
 .image {
   position: relative;
   width: auto;
-  height: 300px;
+  height: 200px;
 }

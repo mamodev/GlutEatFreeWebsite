@@ -10,15 +10,19 @@ export default function AboutUsServices() {
     <div className={styles.container}>
       <div className={styles.item}>
         <Image alt="booking-service" src={bookingImg} />
-        <SmallTitle>SERVIZIO DI PRENOTAZIONE</SmallTitle>
+        <SmallTitle className={styles.text}>
+          SERVIZIO DI PRENOTAZIONE
+        </SmallTitle>
       </div>
       <div className={styles.item}>
         <Image alt="securuty" src={securityImg} />
-        <SmallTitle>SICUREZZA E TRASPARENZA</SmallTitle>
+        <SmallTitle className={styles.text}>SICUREZZA E TRASPARENZA</SmallTitle>
       </div>
       <div className={styles.item}>
         <Image alt="info" src={infoImg} />
-        <SmallTitle>PRESENTAZIONE DEL RISTORATORE</SmallTitle>
+        <SmallTitle className={styles.text}>
+          PRESENTAZIONE DEL RISTORATORE
+        </SmallTitle>
       </div>
     </div>
   );

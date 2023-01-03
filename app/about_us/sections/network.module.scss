@@ -1,18 +1,21 @@
 @import "../../../styles/theme";
 .container {
-  padding-inline: 100px;
+  // padding-inline: 100px;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  gap: 100px;
+  // gap: 100px;
+  gap: 50px;
 }
 .paragraph {
+  text-align: center;
   max-width: 1000px;
-  & .title {
-    margin-bottom: 25px;
-  }
 
   & .content_container {
+    margin-top: 20px;
+    padding-inline: 20px;
+    text-align: justify;
     & :not(:last-child) {
       margin-bottom: 15px;
     }
@@ -23,10 +26,11 @@
   &::before {
     position: absolute;
     content: "";
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 
-    bottom: -80px;
+    bottom: -20px;
+    // bottom: -80px; Desktop
     border-radius: 50%;
     background-color: $grey-50;
 
@@ -38,5 +42,5 @@
 .image {
   position: relative;
   width: auto;
-  height: 300px;
+  height: 200px;
 }

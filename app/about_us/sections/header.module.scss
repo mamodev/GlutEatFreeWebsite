@@ -1,27 +1,30 @@
 @import "../../../styles/theme";
 .container {
-  padding-inline: 100px;
+  // padding-inline: 100px;
+  padding-inline: 35px;
+  // padding-right: 200px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  // justify-content: space-between;
-  padding-right: 200px;
   gap: 50px;
   margin-block: 60px;
 }
 
 .title_container {
+  text-align: center;
   & :not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
-
   margin-bottom: 40px;
 }
 
 .text_container {
   max-width: 1000px;
+  text-align: justify;
 }
 
 .image_container {
+  display: none;
   position: relative;
   &::before {
     position: absolute;

@@ -1,5 +1,4 @@
 import Content from "../../../components/core/Tipograpy/Content";
-import Subtitle from "../../../components/core/Tipograpy/Subtitle";
 import img from "../../../public/assets/images/about-us/laptop.png";
 import Image from "next/image";
 import Title from "../../../components/core/Tipograpy/Title";
