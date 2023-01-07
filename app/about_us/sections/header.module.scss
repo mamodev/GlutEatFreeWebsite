@@ -1,8 +1,7 @@
 @import "../../../styles/theme";
+
 .container {
-  // padding-inline: 100px;
   padding-inline: 35px;
-  // padding-right: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,21 +25,45 @@
 .image_container {
   display: none;
   position: relative;
-  &::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 20px;
-    right: -50%;
-    border-radius: 50%;
-    background-color: $grey-50;
-  }
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 20px;
+  //   right: -50%;
+  //   border-radius: 50%;
+  //   background-color: $grey-50;
+  // }
 }
 
 .image {
   position: relative;
-  width: 350px;
+  width: 400px;
   height: auto;
   border-radius: 50%;
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    overflow: hidden;
+    margin-block: 130px;
+    padding-left: 100px;
+    flex-direction: row;
+  }
+
+  .text_container {
+    text-align: left;
+  }
+
+  .title_container {
+    & > :first-child {
+      margin-bottom: 30px;
+    }
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  .image_container {
+    display: block;
+  }
 }

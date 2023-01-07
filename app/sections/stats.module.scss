@@ -8,20 +8,27 @@ $chart-size: 200px;
 }
 
 .section {
+  @media (min-width: $tablet) {
+    padding-inline: 100px;
+  }
   margin-block: 50px;
   margin-inline: 40px;
   display: flex;
   flex-direction: column;
+
   gap: 50px;
 
   &_container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &:nth-child(2) {
-      flex-direction: column-reverse;
+    gap: 50px;
+    @media (max-width: $tablet) {
+      gap: 0px;
+      flex-direction: column;
+      &:nth-child(2) {
+        flex-direction: column-reverse;
+      }
     }
+    align-items: center;
   }
 }
 
@@ -42,7 +49,7 @@ $chart-size: 200px;
 .pie_one {
   background: conic-gradient($grey-50 0% 23%, $primary 23% 100%);
   border-radius: 50%;
-  width: $chart-size;
+  min-width: $chart-size;
   min-height: $chart-size;
   transform: rotate(-70.5deg);
   margin-bottom: 25px;
@@ -51,18 +58,8 @@ $chart-size: 200px;
 .pie_two {
   background: conic-gradient($grey-50 0% 10%, $secondary 10% 100%);
   border-radius: 50%;
-  width: $chart-size;
+  min-width: $chart-size;
   min-height: $chart-size;
   transform: rotate(-30deg);
   margin-bottom: 25px;
 }
-
-// .section_container {
-//   max-width: 60%;
-// }
-
-// .list {
-//   padding-left: 25px;
-//   list-style: outside;
-//   color: $primary;
-// }

@@ -1,3 +1,4 @@
+@import "../../styles/theme";
 .container {
   text-align: center;
   margin-block: 50px;
@@ -19,6 +20,7 @@
   margin-inline: 30px;
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
   gap: 30px;
 }
 
@@ -35,6 +37,40 @@
   padding-inline: 30px;
   height: auto;
   width: 100%;
+  // aspect-ratio: 1;
   max-width: 250px;
-  object-fit: contain;
+  object-fit: cover;
+}
+
+@media screen and (min-width: $mobile) {
+  .card_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 10%;
+  }
+
+  .card {
+    max-width: 280px;
+  }
+}
+@media screen and (min-width: $tablet) {
+  .card_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-inline: 0px;
+  }
+
+  .card {
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .card_container {
+    padding-inline: 10%;
+  }
+
+  .card {
+    max-width: none;
+  }
 }

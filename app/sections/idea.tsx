@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Button from "../../components/core/Button/Button";
 import Content from "../../components/core/Tipograpy/Content";
-import LargeTitle from "../../components/core/Tipograpy/LargeTitle";
+import Title from "../../components/core/Tipograpy/Title";
 import Flex from "../../components/layout/Flex/Flex";
-import image from "../../public/assets/images/home/idea.png";
+import image from "../../public/assets/images/common/logo-primary.png";
 import styles from "./idea.module.scss";
 export default function HomeIdeaSection() {
   return (
-    <>
-      <LargeTitle className={styles.title}>La nostra idea</LargeTitle>
+    <div>
+      <Title className={styles.title}>La nostra idea</Title>
       <Flex className={styles.container} justify="space-between">
         <div className={styles.content}>
           <Content>
@@ -33,6 +33,6 @@ export default function HomeIdeaSection() {
 
         <Image className={styles.image} src={image} alt="image"></Image>
       </Flex>
-    </>
+    </div>
   );
 }

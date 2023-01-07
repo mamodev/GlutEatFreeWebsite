@@ -33,7 +33,7 @@
   object-fit: contain;
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $mobile) {
   .container {
     padding-inline: 50px;
     display: grid;
@@ -47,7 +47,7 @@
   }
 }
 
-@media (min-width: $laptop) {
+@media (min-width: $tablet) {
   .link_container {
     flex-direction: row;
   }

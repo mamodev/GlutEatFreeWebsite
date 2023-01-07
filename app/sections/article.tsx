@@ -6,7 +6,10 @@ import Title from "../../components/core/Tipograpy/Title";
 import Stack from "../../components/layout/Stack/Stack";
 import styles from "./article.module.scss";
 import Image, { StaticImageData } from "next/image";
-import img from "../../public/assets/images/home/article.png";
+import glut from "../../public/assets/images/home/glut.png";
+import cel from "../../public/assets/images/home/cel.png";
+import doctors from "../../public/assets/images/home/doctors.png";
+import cooking from "../../public/assets/images/home/cooking.png";
 
 export default function HomeArticleSection() {
   return (
@@ -19,22 +22,22 @@ export default function HomeArticleSection() {
         <Card
           title="Benvenuti in GlutEatFree"
           description="Iniziamo insieme un nuovo percorso per un futuro di inclusione alimentare"
-          image={img}
+          image={glut}
         />
         <Card
           title="La celiachia"
           description="Cos’è la celiachia?"
-          image={img}
+          image={cel}
         />
         <Card
           title="Non solo celiachia "
           description="La celiachia non è l’unico disturbo legato all’ingestione di glutine: facciamo chiarezza"
-          image={img}
+          image={cooking}
         />
         <Card
           title="I sintomi"
           description="Come si manifesta la celiachia?"
-          image={img}
+          image={doctors}
         />
       </div>
       <Button size="large" color="secondary">

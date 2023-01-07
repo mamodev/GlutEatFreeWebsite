@@ -8,7 +8,7 @@ import styles from "./header.module.scss";
 export default function HomeHeader() {
   return (
     <div className={styles.container}>
-      {/* <svg
+      <svg
         className={styles.svg}
         width="597"
         height="576"
@@ -17,16 +17,18 @@ export default function HomeHeader() {
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle cx="500" cy="76" r="500" className={styles.svg__path} />
-      </svg> */}
+      </svg>
 
       <Image src={logo} alt="logo" className={styles.logo} />
-      <div className={styles.text_container}>
-        <LargeTitle>{"CELIACHIA E INCLUSIONE ALIMENTARE"}</LargeTitle>
-        <Subtitle>Tutto il mondo senza glutine ma non per moda</Subtitle>
+      <div className={styles.content}>
+        <div className={styles.text_container}>
+          <LargeTitle>{"CELIACHIA E INCLUSIONE ALIMENTARE"}</LargeTitle>
+          <Subtitle>Tutto il mondo senza glutine ma non per moda</Subtitle>
+        </div>
+        <Button size="large" variant="contained" color="secondary">
+          Iscriviti alla Newsletter
+        </Button>
       </div>
-      <Button size="large" variant="contained" color="secondary">
-        Iscriviti alla Newsletter
-      </Button>
     </div>
   );
 }

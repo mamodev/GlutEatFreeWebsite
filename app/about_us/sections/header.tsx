@@ -1,9 +1,9 @@
 import Content from "../../../components/core/Tipograpy/Content";
 import Subtitle from "../../../components/core/Tipograpy/Subtitle";
-import img from "../../../public/assets/images/about-us/header.png";
 import styles from "./header.module.scss";
 import Image from "next/image";
 import LargeTitle from "../../../components/core/Tipograpy/LargeTitle";
+import img from "../../../public/assets/images/about-us/header.png";
 
 export default function AboutUsHeader() {
   return (

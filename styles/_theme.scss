@@ -1,8 +1,11 @@
 //Break points
-$mobile: 415px;
-$tablet: 768px;
-$laptop: 1280px;
-$desktop: 1920px;
+
+// 0 => 415
+$mobile: 416px;
+// 415 => 820
+$tablet: 821px;
+$laptop: 1281px;
+$desktop: 1921px;
 
 // palette
 $primary: #213589;
@@ -33,14 +36,28 @@ $grey-100: #e6e6e8;
   --font-content--large: 20px;
   --font-content--small: 14px;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $mobile) {
+    --font-title: 30px;
+    --font-title--large: 50px;
+    --font-title--small: 25px;
+
+    --font-subtitle: 20px;
+    --font-subtitle--large: 24px;
+    --font-subtitle--small: 18px;
+
+    --font-content: 18px;
+    --font-content--large: 20px;
+    --font-content--small: 16px;
+  }
+
+  @media (min-width: $laptop) {
     --font-button: 17px;
     --font-button--large: 24px;
     --font-button--small: 15px;
 
-    --font-title: 48px;
+    --font-title: 45px;
     --font-title--large: 68px;
-    --font-title--small: 36px;
+    --font-title--small: 28px;
 
     --font-subtitle: 26px;
     --font-subtitle--large: 68px;

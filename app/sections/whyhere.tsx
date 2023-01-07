@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Button from "../../components/core/Button/Button";
 import Content from "../../components/core/Tipograpy/Content";
-import LargeTitle from "../../components/core/Tipograpy/LargeTitle";
-import image from "../../public/assets/images/home/table-bar.png";
+import Title from "../../components/core/Tipograpy/Title";
+import image from "../../public/assets/images/home/why-here.png";
 import styles from "./whyhere.module.scss";
 
 export default function HomeWhyHereSection() {
   return (
-    <>
-      <LargeTitle className={styles.title}>PERCHÈ SIAMO QUI</LargeTitle>
+    <div>
+      <Title className={styles.title}>PERCHÈ SIAMO QUI</Title>
       <div className={styles.container}>
         <Image className={styles.image} src={image} alt="image" />
         <div className={styles.content}>
@@ -30,6 +30,6 @@ export default function HomeWhyHereSection() {
           <Button color="secondary">Scopri di più sulla celiachia</Button>
         </div>
       </div>
-    </>
+    </div>
   );
 }

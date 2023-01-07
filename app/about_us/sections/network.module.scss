@@ -1,26 +1,24 @@
 @import "../../../styles/theme";
 .container {
-  // padding-inline: 100px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  // gap: 100px;
   gap: 50px;
 }
 .paragraph {
-  text-align: center;
   max-width: 1000px;
+  padding-inline: 20px;
 
   & .content_container {
-    margin-top: 20px;
-    padding-inline: 20px;
+    margin-top: 10px;
     text-align: justify;
     & :not(:last-child) {
       margin-bottom: 15px;
     }
   }
 }
+
 .image_container {
   position: relative;
   &::before {
@@ -43,4 +41,36 @@
   position: relative;
   width: auto;
   height: 200px;
+}
+
+.subtitle {
+  font-weight: 500;
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    padding-inline: 100px;
+    gap: 50px;
+    flex-direction: row;
+  }
+
+  .paragraph {
+    text-align: left;
+
+    & .content_container {
+      margin-top: 20px;
+      padding-left: 50px;
+    }
+  }
+
+  .image {
+    height: 300px;
+  }
+
+  .image_container {
+    &::before {
+      width: 250px;
+      height: 250px;
+    }
+  }
 }

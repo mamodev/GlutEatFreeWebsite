@@ -21,3 +21,16 @@
     max-width: 200px;
   }
 }
+
+@media screen and (min-width: $tablet) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-inline: 15%;
+  }
+
+  .item {
+    & .text {
+      max-width: 300px;
+    }
+  }
+}

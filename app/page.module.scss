@@ -1,0 +1,10 @@
+@import "../styles/theme";
+
+@media screen and (min-width: $laptop) {
+  .spacer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 40px;
+  }
+}

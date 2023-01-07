@@ -15,8 +15,8 @@ export default function AboutUsNetwork() {
         <Title className={styles.title}>
           IL NETWORK DI RISTORANTI INCLUSIVI
         </Title>
-        <Content>Come vogliamo aiutare?</Content>
         <div className={styles.content_container}>
+          <Content className={styles.subtitle}>Come vogliamo aiutare?</Content>
           <Content>
             Creando un network di ristoranti inclusivi: un posto dove non solo i
             celiaci, ma anche i loro parenti e amici possano cercare e prenotare

@@ -3,7 +3,6 @@
   background-color: $grey-50;
   text-align: center;
   padding-block: 50px;
-  // padding-inline: 100px;
 
   & .content {
     text-align: justify;
@@ -12,5 +11,18 @@
 
   & :not(:last-child) {
     padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > * {
+      max-width: 1000px;
+      flex: 1;
+    }
   }
 }

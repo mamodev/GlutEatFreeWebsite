@@ -1,3 +1,5 @@
+@import "../../styles/theme";
+
 .container {
   margin-block: 30px;
   display: flex;
@@ -18,21 +20,40 @@
   height: auto;
 }
 
-.grid {
-  margin-inline: 10px;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  grid-gap: 20px;
-  &__item {
-    max-width: 250px;
-    text-align: center;
+@media screen and (max-width: $mobile) {
+  .grid {
+    margin-inline: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-gap: 20px;
+
+    &__item {
+      max-width: 250px;
+      text-align: center;
+    }
   }
 }
 
-// .grid {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   justify-items: center;
-//   margin-inline: 100px;
-// }
+@media screen and (min-width: $mobile) {
+  .container {
+    gap: 50px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    margin-inline: 20px;
+
+    &__item {
+      max-width: 250px;
+      text-align: center;
+    }
+  }
+}
+@media screen and (min-width: $laptop) {
+  .grid {
+    margin-inline: 100px;
+  }
+}
