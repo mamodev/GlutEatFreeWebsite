@@ -40,8 +40,8 @@ export default function HomeArticleSection() {
           image={doctors}
         />
       </div>
-      <Button size="large" color="secondary">
-        Vedi più articoli
+      <Button size="large" color="secondary" disabled={true}>
+        A breve nel blog!
       </Button>
     </div>
   );

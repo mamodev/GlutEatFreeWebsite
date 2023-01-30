@@ -1,13 +1,10 @@
 import Image from "next/image";
-import Content from "../../components/core/Tipograpy/Content";
 import LargeTitle from "../../components/core/Tipograpy/LargeTitle";
 import SmallContent from "../../components/core/Tipograpy/SmallContent";
 import Subtitle from "../../components/core/Tipograpy/Subtitle";
 import Title from "../../components/core/Tipograpy/Title";
-// import Flex from "../../components/layout/Flex/Flex";
 import Stack from "../../components/layout/Stack/Stack";
 import NewsLetter from "../../components/modules/NewsLetter/news-letter";
-// import NewsLetter from "../../components/modules/NewsLetter/news-letter";
 import descriptionImage from "../../public/assets/images/discover/description.png";
 import symptomsImage from "../../public/assets/images/discover/symptoms.png";
 import treatmentImage from "../../public/assets/images/discover/treatment.png";
@@ -15,7 +12,7 @@ import styles from "./page.module.scss";
 
 export default function DiscoverPage() {
   return (
-    <div className={styles.page_container}>
+    <div className={styles.page_container} style={{ marginBottom: 30 }}>
       <Header />
       <div className={styles.info_container}>
         <Description />
@@ -39,27 +36,35 @@ function Discover() {
       <div className={styles.discover_grid}>
         <ul>
           <li>
-            <a>Associazione Italiana Celiachia:</a>
+            <a href="https://www.celiachia.it">
+              Associazione Italiana Celiachia:
+            </a>
             <ul>
               <li>
-                <a>La diagnosi </a>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a>La terapia </a>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <a>
-                  Dove di trova il glutine? L&apos;ABC della dieta del celiaco{" "}
+                <a href="https://www.celiachia.it/celiachia/diagnosi/">
+                  La diagnosi{" "}
                 </a>
               </li>
             </ul>
             <ul>
               <li>
-                <a>Alimentazione fuori casa </a>
+                <a href="https://www.celiachia.it/celiachia/la-terapia/">
+                  La terapia{" "}
+                </a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="https://www.celiachia.it/dieta-senza-glutine/labc-della-dieta-del-celiaco/">
+                  Dove di trova il glutine? L&apos;ABC della dieta del celiaco
+                </a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="https://www.celiachia.it/dieta-senza-glutine/progetto-alimentazione-fuori-casa/">
+                  Alimentazione fuori casa{" "}
+                </a>
               </li>
             </ul>
           </li>
@@ -69,12 +74,16 @@ function Discover() {
           <a>Altro:</a>
           <ul>
             <li>
-              <a>Istituto Superiore di Sanità</a>
+              <a href="https://www.epicentro.iss.it/celiachia/">
+                Istituto Superiore di Sanità
+              </a>
             </li>
           </ul>
           <ul>
             <li>
-              <a>Ministero della Salute </a>
+              <a href="https://www.salute.gov.it/portale/p5_1_1.jsp?lingua=italiano&faqArea=nutrizione&id=115">
+                Ministero della Salute{" "}
+              </a>
             </li>
           </ul>
         </ul>
@@ -108,24 +117,28 @@ function Description() {
       <Stack spacing={30} className={styles.content_container}>
         <Title className={styles.title}>COS&apos;È?</Title>
         <SmallContent>
-          La celiachia è un&apos;enteropatia auto-infiammatoria permanente, con
-          tratti di auto-immunità, scatenata dall&apos;ingestione di glutine in
-          soggetti geneticamente predisposti. In altre parole, si tratta di
-          un&apos;infiammazione cronica dell&apos;intestino dovuta al fatto che
-          nei soggetti celiaci il glutine attiva il sistema immunitario che
-          attacca la mucosa intestinale provocandone il danneggiamento e
-          causando l&apos;appiattimento dei villi, le strutture responsabili
-          dell&apos;assorbimento di nutrienti e minerali. Si determinano così i
-          disturbi della malattia celiaca.
+          La <strong>celiachia</strong> è un&apos;enteropatia auto-infiammatoria
+          permanente, con tratti di auto-immunità, scatenata
+          dall&apos;ingestione di glutine in soggetti geneticamente predisposti.
+          In altre parole, si tratta di un&apos;
+          <strong>infiammazione cronica dell&apos;intestino</strong> dovuta al
+          fatto che nei soggetti celiaci il glutine attiva il sistema
+          immunitario che attacca la mucosa intestinale provocandone il
+          danneggiamento e causando l&apos;appiattimento dei villi, le strutture
+          responsabili dell&apos;assorbimento di nutrienti e minerali. Si
+          determinano così i disturbi della malattia celiaca.
         </SmallContent>
 
         <SmallContent>
-          La celiachia è una malattia multifattoriale. Perché la celiachia si
-          sviluppi sono necessari almeno due fattori: l&apos;ingestione di
-          glutine e la predisposizione genetica. Tuttavia, solo il 3% dei
-          soggetti predisposti geneticamente che consumano glutine sviluppa
-          questa malattia nel corso della vita. Ad oggi, non sono ancora noti i
-          fattori scatenanti che portano al manifestarsi della celiachia.
+          La celiachia è una <strong>malattia multifattoriale</strong>. Perché
+          la celiachia si sviluppi sono necessari almeno due fattori:{" "}
+          <strong>
+            l&apos;ingestione di glutine e la predisposizione genetica
+          </strong>
+          . Tuttavia, solo il 3% dei soggetti predisposti geneticamente che
+          consumano glutine sviluppa questa malattia nel corso della vita. Ad
+          oggi, non sono ancora noti i <strong>fattori scatenanti</strong> che
+          portano al manifestarsi della celiachia.
         </SmallContent>
       </Stack>
     </div>
@@ -137,22 +150,27 @@ function Symptoms() {
       <Stack spacing={30} className={styles.content_container}>
         <Title className={styles.title}>I SINTOMI</Title>
         <SmallContent>
-          I sintomi con cui la celiachia si manifesta sono estremamente
-          variabili. Solitamente nei bambini sono più frequenti sintomi
-          intestinali, come diarrea e dolori addominali, e rallentamento della
-          crescita. Invece in età adulta la celiachia si manifesta spesso con
-          sintomi e complicanze extraintestinali, come anemia, stanchezza,
-          alopecia, perdita di peso, infertilità e osteoporosi. La celiachia può
-          anche svilupparsi in forma silente, ovvero in totale assenza di
-          sintomi.
+          I sintomi con cui la celiachia si manifesta sono
+          <strong>estremamente variabili</strong>. Solitamente nei bambini sono
+          più frequenti <strong>sintomi intestinali</strong>, come diarrea e
+          dolori addominali, e rallentamento della crescita. Invece in età
+          adulta la celiachia si manifesta spesso con sintomi e{" "}
+          <strong> complicanze extraintestinali</strong>, come anemia,
+          stanchezza, alopecia, perdita di peso, infertilità e osteoporosi. La
+          celiachia può anche svilupparsi <strong>in forma silente</strong>,
+          ovvero in totale assenza di sintomi.
         </SmallContent>
 
         <SmallContent>
           Ciò che è importante tenere a mente è che a prescindere dalla presenza
-          e dalla gravità dei sintomi, i danni provocati dalla malattia
-          celiachia sono gli stessi in tutti i soggetti. Se non curata
-          adeguatamente, la celiachia può portare allo sviluppo di altre
-          malattie e complicanze, dal diabete mellito al cancro intestinale.
+          e dalla gravità dei sintomi,{" "}
+          <strong>
+            i danni provocati dalla malattia celiachia sono gli stessi in tutti
+            i soggetti
+          </strong>
+          . Se non curata adeguatamente, la celiachia può portare allo sviluppo
+          di altre malattie e complicanze, dal diabete mellito al cancro
+          intestinale.
         </SmallContent>
       </Stack>
       <Image alt="symptoms" src={symptomsImage} className={styles.image} />
@@ -168,14 +186,18 @@ function Treatment() {
       <Stack spacing={30} className={styles.content_container}>
         <Title className={styles.title}>SI PUÒ CURARE?</Title>
         <SmallContent>
-          Ad oggi, l&apos;unica terapia riconosciuta per la celiachia è una
-          rigorosa dieta senza glutine da seguire per tutta la vita.
+          Ad oggi, l&apos;unica terapia riconosciuta per la celiachia{" "}
+          <strong>
+            è una rigorosa dieta senza glutine da seguire per tutta la vita
+          </strong>
+          .
         </SmallContent>
 
         <SmallContent>
           Seguire una dieta senza glutine vuol dire non solo eliminare dalla
           propria alimentazione tutti i cibi a base di cereali contenenti
-          glutine, ma anche fare attenzione alle contaminazioni da glutine.
+          glutine, ma{" "}
+          <strong>anche fare attenzione alle contaminazioni da glutine</strong>.
         </SmallContent>
         <SmallContent>
           Per i celiaci è quindi necessario sapere quali sono le tipologie di

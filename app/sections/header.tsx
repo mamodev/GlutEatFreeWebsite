@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Button from "../../components/core/Button/Button";
 import LargeTitle from "../../components/core/Tipograpy/LargeTitle";
 import Subtitle from "../../components/core/Tipograpy/Subtitle";
 import logo from "../../public/assets/images/common/logo-primary.png";
@@ -25,9 +24,9 @@ export default function HomeHeader() {
           <LargeTitle>{"CELIACHIA E INCLUSIONE ALIMENTARE"}</LargeTitle>
           <Subtitle>Tutto il mondo senza glutine ma non per moda</Subtitle>
         </div>
-        <Button size="large" variant="contained" color="secondary">
+        {/* <Button size="large" variant="contained" color="secondary">
           Iscriviti alla Newsletter
-        </Button>
+        </Button> */}
       </div>
     </div>
   );

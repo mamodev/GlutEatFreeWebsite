@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Button from "../../components/core/Button/Button";
 import Content from "../../components/core/Tipograpy/Content";
 import Title from "../../components/core/Tipograpy/Title";
@@ -7,8 +8,10 @@ import styles from "./whyhere.module.scss";
 
 export default function HomeWhyHereSection() {
   return (
-    <div>
-      <Title className={styles.title}>PERCHÈ SIAMO QUI</Title>
+    <div className={styles.section_container}>
+      <div className={styles.title_container}>
+        <Title className={styles.title}>PERCHÈ SIAMO QUI</Title>
+      </div>
       <div className={styles.container}>
         <Image className={styles.image} src={image} alt="image" />
         <div className={styles.content}>
@@ -27,7 +30,9 @@ export default function HomeWhyHereSection() {
             Ma 3 italiani su 10 pensano ancora che una dieta senza glutine serva
             a dimagrire.
           </Content>
-          <Button color="secondary">Scopri di più sulla celiachia</Button>
+          <Link href="discover">
+            <Button color="secondary">Scopri di più sulla celiachia</Button>
+          </Link>
         </div>
       </div>
     </div>

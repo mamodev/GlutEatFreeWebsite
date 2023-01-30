@@ -2,6 +2,7 @@ import Title from "../../../components/core/Tipograpy/Title";
 import Button from "../../../components/core/Button/Button";
 import styles from "./celiac-disease.module.scss";
 import Content from "../../../components/core/Tipograpy/Content";
+import Link from "next/link";
 
 export default function AboutUsCeliacDiesase() {
   return (
@@ -16,9 +17,11 @@ export default function AboutUsCeliacDiesase() {
         viviamo sulla nostra pelle e su quella dei nostri familiari, ed è per
         questo che abbiamo deciso di iniziare proprio da qui.
       </Content>
-      <Button color="secondary" size="large">
-        Cos’è la celiachia?
-      </Button>
+      <Link href="discover">
+        <Button color="secondary" size="large">
+          Cos’è la celiachia?
+        </Button>
+      </Link>
     </div>
   );
 }

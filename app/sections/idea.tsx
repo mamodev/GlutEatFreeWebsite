@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Button from "../../components/core/Button/Button";
 import Content from "../../components/core/Tipograpy/Content";
 import Title from "../../components/core/Tipograpy/Title";
@@ -7,8 +8,10 @@ import image from "../../public/assets/images/common/logo-primary.png";
 import styles from "./idea.module.scss";
 export default function HomeIdeaSection() {
   return (
-    <div>
-      <Title className={styles.title}>La nostra idea</Title>
+    <div className={styles.section_container}>
+      <div className={styles.title_container}>
+        <Title className={styles.title}>La nostra idea</Title>
+      </div>
       <Flex className={styles.container} justify="space-between">
         <div className={styles.content}>
           <Content>
@@ -28,7 +31,9 @@ export default function HomeIdeaSection() {
             e le limitazioni che questo causa, ma anche la mancanza di
             consapevolezza e conoscenza del problema.
           </Content>
-          <Button color="secondary">Scopri di più su di noi</Button>
+          <Link href="/about_us">
+            <Button color="secondary">Scopri di più su di noi</Button>
+          </Link>
         </div>
 
         <Image className={styles.image} src={image} alt="image"></Image>

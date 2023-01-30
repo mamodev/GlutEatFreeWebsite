@@ -1,20 +1,29 @@
 @import "../../styles/theme";
 
+.section_container {
+  padding-top: 40px;
+}
+
+.title_container {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  transform: translateY(-50%);
+  line-height: 1;
+}
+
 @media screen and (max-width: $tablet) {
   .image {
     display: none;
   }
 
-  .title {
-    width: 100%;
-    text-align: center;
-    z-index: 10;
-    transform: translateY(50%);
-    line-height: 1;
-  }
-
   .container {
-    z-index: -1;
+    z-index: 0;
     position: relative;
     padding-inline: 15px;
     padding-block: 30px;
@@ -35,7 +44,6 @@
     position: relative;
     padding-left: 100px;
     background-color: $grey-50;
-    z-index: -1;
     padding-block: 50px;
   }
 
@@ -54,12 +62,5 @@
     width: 380px;
     border-radius: 50%;
     object-fit: cover;
-  }
-
-  .title {
-    padding-left: 70px;
-    z-index: 100;
-    transform: translateY(50%);
-    line-height: 1;
   }
 }

@@ -1,21 +1,40 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import drawerLogo from "../../../public/assets/images/common/logo-white.png";
+import longLogo from "../../../public/assets/images/long-logo.png";
 import { composeClasses } from "../../../utils";
-import Button from "../../core/Button/Button";
 import NavLink from "../../core/NavLink/NavLink";
 import styles from "./Appbar.module.scss";
-import longLogo from "../../../public/assets/images/long-logo.png";
-import drawerLogo from "../../../public/assets/images/common/logo-white.png";
 
 export default function Appbar() {
+  const [scrolled, setScrolled] = React.useState(true);
   const [menuOpen, setMenuOpen] = React.useState(false);
 
   const menuButtonClickHandler = () => {
     setMenuOpen((open) => (open ? false : open));
   };
+
+  const scrollHandler = React.useCallback((event: Event) => {
+    console.log(event);
+    if (window.scrollY > 50) setScrolled(true);
+    else setScrolled(false);
+  }, []);
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, [scrollHandler]);
+
   return (
-    <nav className={styles.nav}>
+    <nav
+      className={composeClasses([
+        styles.nav,
+        scrolled ? styles.scrolled : undefined,
+      ])}
+    >
       <div className={styles.container}>
         <Image src={longLogo} alt="Appbar logo" className={styles.logo} />
 
@@ -45,11 +64,11 @@ export default function Appbar() {
               Scopri di più
             </NavLink>
           </span>
-          <span>
+          {/* <span>
             <Button color="secondary" onClick={menuButtonClickHandler}>
               Iscriviti alla Newsletter
             </Button>
-          </span>
+          </span> */}
         </div>
 
         <button

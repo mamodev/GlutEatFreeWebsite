@@ -1,12 +1,23 @@
 @import "../../styles/theme";
 
+.section_container {
+  padding-top: 40px;
+}
+
+.title_container {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  transform: translateY(-50%);
+  line-height: 1;
+}
+
 @media screen and (max-width: $tablet) {
-  .title {
-    text-align: center;
-    transform: translateY(50%);
-    line-height: 1;
-    z-index: 10;
-  }
   .image {
     display: none;
   }
@@ -32,16 +43,9 @@
     position: relative;
     padding-left: 500px;
     background-color: $grey-50;
-    z-index: -1;
     padding-block: 50px;
   }
 
-  .title {
-    padding-left: 480px;
-    transform: translateY(50%);
-    line-height: 1;
-    z-index: 10;
-  }
   .content {
     max-width: 80%;
     display: flex;

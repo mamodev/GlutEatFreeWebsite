@@ -64,3 +64,8 @@ table {
 button {
   position: relative;
 }
+
+a {
+  color: $primary;
+  text-decoration-color: $secondary;
+}

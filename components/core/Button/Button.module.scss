@@ -21,6 +21,9 @@
       &:hover {
         background-color: $secondary;
         color: $secondary-contrast;
+        &:disabled {
+          background-color: $grey-50;
+        }
       }
     }
 
@@ -31,6 +34,13 @@
       &:hover {
         background-color: $primary;
         color: $primary-contrast;
+      }
+
+      &:disabled {
+        background-color: $grey-50;
+        &:hover {
+          color: $primary;
+        }
       }
     }
   }
